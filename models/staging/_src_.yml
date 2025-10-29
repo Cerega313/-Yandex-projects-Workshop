@@ -1,0 +1,6 @@
+sources:
+  - name: staging
+    database: public
+    schema: staging
+    tables:
+      - name: users_user
