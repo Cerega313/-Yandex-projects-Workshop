@@ -1,1 +1,1 @@
-select * from public.users_user
+select * from {{ source('staging', 'users_user') }}

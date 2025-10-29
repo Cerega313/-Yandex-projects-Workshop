@@ -1,6 +1,6 @@
 sources:
   - name: staging
-    database: public
-    schema: staging
+    database: agroclub_db
+    schema: public
     tables:
       - name: users_user
