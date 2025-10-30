@@ -4,3 +4,11 @@ sources:
     schema: public
     tables:
       - name: users_user
+        freshness:
+          warn_after:
+            count: 10
+            period: day
+          error_after:
+            count: 20
+            period: day
+        loaded_at_field: date_joined
