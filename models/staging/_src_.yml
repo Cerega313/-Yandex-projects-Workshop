@@ -361,7 +361,6 @@ sources:
       - name: users_profile
       - name: users_profilecompany
       - name: users_profileproducttag
-      - name: users_user
       - name: users_user_groups
       - name: users_user_user_permissions
       - name: users_userdocument
