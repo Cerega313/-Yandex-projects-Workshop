@@ -10,8 +10,6 @@ renamed as (
 
     select
         id as user_id,
-        password,
-        last_login,
         is_superuser,
         email,
         is_staff,
@@ -22,10 +20,7 @@ renamed as (
         hide_calls,
         blocked_at,
         blocked_by_id,
-        blocked_reason,
-        removal_reason,
-        last_ip_address,
-        is_mobile_phone
+        blocked_reason
 
     from source
 
