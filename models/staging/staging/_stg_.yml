@@ -1,0 +1,24 @@
+models:
+  - name: stg_staging__bids_bid 
+    columns:
+      - name: bid_id
+        data_tests:
+          - unique
+          - not_null
+      - name: bid_type
+        data_tests:
+          - accepted_values:
+              values:
+                - sale
+                - purchase
+      - name: owner_id
+        data_tests:
+          - relationships:
+              field: <user_id>
+              to: ref('stg_staging_users_user')
+  - name: stg_staging_users_user
+    columns:
+      - name: user_id
+        data_tests:
+          - unique
+          - not_null
