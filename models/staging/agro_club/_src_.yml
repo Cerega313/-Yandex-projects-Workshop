@@ -2,8 +2,10 @@ sources:
   - name: staging
     database: agroclub_db
     schema: public
+    description: replica of backend DB 
     tables:
       - name: users_user
+        description: raw users data 
         freshness:
           warn_after:
             count: 10

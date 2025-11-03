@@ -1,20 +1,23 @@
 models:
   - name: stg_staging__bids_bid 
+    description: the grain is unique bid per line 
     columns:
       - name: bid_id
         data_tests:
           - unique
           - not_null
       - name: bid_type
+        description: "{{ doc('bid_type') }}"
         data_tests:
           - accepted_values:
               values:
                 - sale
                 - purchase
       - name: owner_id
+        description: Primary key the users table 
         data_tests:
           - relationships:
-              field: <user_id>
+              field: user_id
               to: ref('stg_staging_users_user')
   - name: stg_staging_users_user
     columns:
